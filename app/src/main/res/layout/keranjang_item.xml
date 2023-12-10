@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="30dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/cartItemImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_gmart_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="291dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cartItemImageView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cartItemNamaProduk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ini judul produk"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:id="@+id/cartItemHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 150.000"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingVertical="3dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Banyaknya"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginVertical="0dp"
+                    >
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/cartItemKurangiJumlahBtn"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@color/hijau_200"-->
+<!--                        android:src="@drawable/ic_minus_24" />-->
+                    <Button
+                        android:id="@+id/cartItemKurangiJumlahBtn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="0dp"
+                        android:text="-"
+                        />
+
+                    <TextView
+                        android:id="@+id/cartItemKuantitas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="0dp"
+                        android:layout_margin="0dp"
+                        android:gravity="center"
+                        android:text=" 2 "
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        />
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/cartItemTambahJumlahBtn"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@color/hijau_200"-->
+<!--                        android:src="@drawable/ic_baseline_add_24"-->
+<!--                        android:layout_weight="1"-->
+<!--                        />-->
+                    <Button
+                        android:id="@+id/cartItemTambahJumlahBtn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="0dp"
+                        android:text="+"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/cartItemTotalHarga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 200.000"
+                    android:layout_weight="1"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

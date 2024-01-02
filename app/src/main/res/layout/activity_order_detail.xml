@@ -109,6 +109,10 @@
                     android:layout_height="wrap_content"
                     android:text="Status : Belum Dibayar" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Rekening:123321 BRI an Gian Mansa" />
 
                 <LinearLayout
                     android:id="@+id/inputBuktiBayar"
